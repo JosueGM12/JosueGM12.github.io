@@ -1,0 +1,236 @@
+
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro Educativo Franklin Delano Roosevelt, uno de los colegios más grandes de Puerto Cortés, Honduras. Ofrecemos varias carreras técnicas.">
+    <title>Centro Educativo Franklin Delano Roosevelt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1E90FF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .carreras {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .carrera {
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .carrera p {
+            min-height: 80px;
+        }
+        .detalle-carrera {
+            display: none;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Centro Educativo Franklin Delano Roosevelt</h1>
+    <p>Uno de los colegios más grandes de Puerto Cortés, Honduras</p>
+</header>
+
+<nav>
+    <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+    <a href="#" onclick="mostrarSeccion('carreras')">Carreras</a>
+    <a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a>
+    <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+    <a href="#" onclick="mostrarSeccion('Promoción 2024')">Promoción</a>
+</nav>
+
+<main>
+    <section id="inicio" class="seccion">
+        <h2>Bienvenido al Centro Educativo</h2>
+        <p>En el Centro Educativo Franklin Delano Roosevelt, nos comprometemos a brindar educación de calidad con un enfoque en el desarrollo integral de nuestros estudiantes. Nuestro objetivo es preparar a los jóvenes para enfrentar los retos del mundo actual a través de una educación técnica y profesional.</p>
+        <p>Contamos con instalaciones modernas y un equipo docente altamente calificado que guía a los estudiantes en su formación. Nuestro compromiso es asegurar que cada alumno adquiera no solo conocimientos teóricos, sino también habilidades prácticas que serán esenciales en su futura carrera profesional.</p>
+        <p>¡Explora nuestras carreras técnicas y descubre cómo podemos ayudarte a alcanzar tus metas!</p>
+    </section>
+
+    <section id="carreras" class="seccion hidden">
+        <h2>Nuestras Carreras Técnicas</h2>
+        <div class="carreras">
+            <div class="carrera">
+                <h3>Informática</h3>
+                <p>La carrera de Informática te prepara para un futuro en el desarrollo de software, redes y tecnologías de la información.</p>
+                <button onclick="mostrarDetalles('detalle-informatica')">Más información</button>
+                <div id="detalle-informatica" class="detalle-carrera">
+                    <p>El programa de Informática cubre áreas como la programación, diseño de bases de datos, desarrollo web, ciberseguridad, redes y más. Los egresados tienen habilidades para diseñar, implementar y administrar soluciones tecnológicas. La carrera incluye prácticas en empresas, lo que permite a los estudiantes aplicar lo aprendido en un entorno real.</p>
+                </div>
+            </div>
+            <div class="carrera">
+                <h3>Contaduría y Finanzas</h3>
+                <p>Enfocada en la gestión financiera y contable, ideal para aquellos interesados en el mundo de los negocios y las finanzas.</p>
+                <button onclick="mostrarDetalles('detalle-contaduria')">Más información</button>
+                <div id="detalle-contaduria" class="detalle-carrera">
+                    <p>La carrera de Contaduría y Finanzas abarca contabilidad, análisis financiero, auditoría, y planificación financiera. Los graduados están capacitados para trabajar en empresas, bancos y consultoras, gestionando recursos y tomando decisiones financieras clave. Además, se les proporciona formación en ética profesional y responsabilidad social.</p>
+                </div>
+            </div>
+            <div class="carrera">
+                <h3>Construcciones Metálicas</h3>
+                <p>Prepara a los estudiantes para trabajar en el diseño, construcción y mantenimiento de estructuras metálicas.</p>
+                <button onclick="mostrarDetalles('detalle-construcciones')">Más información</button>
+                <div id="detalle-construcciones" class="detalle-carrera">
+                    <p>Esta carrera incluye el estudio de materiales metálicos, técnicas de soldadura, dibujo técnico, y diseño de estructuras. Los egresados pueden trabajar en la industria de la construcción, fabricación y mantenimiento de infraestructuras. El programa también enfatiza la seguridad laboral y la sostenibilidad en la construcción.</p>
+                </div>
+            </div>
+            <div class="carrera">
+                <h3>Administración de Empresas</h3>
+                <p>Forma a los futuros líderes empresariales con habilidades en la gestión de organizaciones, planificación y toma de decisiones.</p>
+                <button onclick="mostrarDetalles('detalle-admin')">Más información</button>
+                <div id="detalle-admin" class="detalle-carrera">
+                    <p>La carrera de Administración de Empresas ofrece formación en gestión de recursos humanos, finanzas, marketing, y planificación estratégica. Los egresados son capaces de dirigir equipos y gestionar organizaciones de manera eficiente y ética. También se incluye un módulo de emprendimiento que ayuda a los estudiantes a desarrollar sus propias ideas de negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="seccion hidden">
+        <h2>Nosotros</h2>
+        <p>El Centro Educativo Franklin Delano Roosevelt se dedica a formar profesionales competentes y comprometidos con su comunidad, brindando un ambiente educativo inclusivo y de calidad. Nuestra institución se rige por los principios de excelencia académica y responsabilidad social.</p>
+        <p>Contamos con un equipo docente altamente calificado, que se enfoca en desarrollar no solo habilidades técnicas, sino también valores éticos y de trabajo en equipo en nuestros estudiantes.</p>
+        <p>Además, promovemos la participación activa de nuestros alumnos en proyectos comunitarios, ayudándoles a entender la importancia de contribuir al desarrollo de su entorno.</p>
+    </section>
+
+   <section id="Promoción 2024" class="seccion ">
+    <h2>Bienvenido al Centro Educativo Franklin Delano Roosevelt</h2>
+    <p>El Centro Educativo Franklin Delano Roosevelt se enorgullece de ser una de las instituciones más destacadas de Puerto Cortés, Honduras. Ofrecemos una formación técnica de alta calidad que prepara a nuestros estudiantes para enfrentarse a los retos del mundo laboral y académico.</p>
+    <p>Contamos con un cuerpo docente altamente capacitado, infraestructura moderna y un enfoque educativo orientado hacia el desarrollo integral de nuestros estudiantes. Nuestro objetivo es no solo brindar conocimientos técnicos, sino también fomentar valores como la responsabilidad, el trabajo en equipo y el liderazgo.</p>
+    
+    <h3>Promoción 2024</h3>
+    <div class="imagenes-promocion">
+        <img src="C:\Users\Josue\Downloads\Imagen de WhatsApp 2024-11-01 a las 23.55.29_65c04876.jpg" alt="Foto de la Promoción 2024" class="imagen-promocion"><img width="200" height="300" controls></video>
+        <img src="C:\Users\Josue\Downloads\Imagen de WhatsApp 2024-11-01 a las 23.55.33_8805c8b0.jpg" alt="Foto de la Promoción 2023" class="imagen-promocion">
+        <img src="C:\Users\Josue\Downloads\Imagen de WhatsApp 2024-11-01 a las 23.55.36_168513d1.jpg" alt="Foto de la Promoción 2022" class="imagen-promocion">
+        <img src="C:\Users\Josue\Downloads\Imagen de WhatsApp 2024-11-01 a las 23.55.39_79ce5a99.jpg" alt="Foto de la Promoción 2022" class="imagen-promocion">
+        <img src="C:\Users\Josue\Pictures\p3.jpg" alt="Foto de la Promoción 2022" class="imagen-promocion">
+        <img src="C:\Users\Josue\Pictures\p4.jpg" alt="Foto de la Promoción 2022" class="imagen-promocion">
+        <img src="C:\Users\Josue\Pictures\p5.jpg" alt="Foto de la Promoción 2022" class="imagen-promocion">
+        <img src="C:\Users\Josue\Pictures\p6.jpg" alt="Foto de la Promoción 2022" class="imagen-promocion">
+        <img src="C:\Users\Josue\Pictures\p7.jpg" alt="Foto de la Promoción 2022" class="imagen-promocion">
+    </div>
+
+    <div>
+        <p>Nos complace anunciar que la Promoción 2024 del Centro Educativo Franklin Delano Roosevelt está compuesta por un grupo excepcional de jóvenes talentosos y dedicados. Estos estudiantes han demostrado su compromiso con el aprendizaje, superando desafíos y destacándose en diversas áreas académicas y técnicas.</p>
+        <p>Los graduados de la Promoción 2024 están preparados para afrontar los desafíos del futuro, con habilidades técnicas y humanas que los convertirán en líderes en sus respectivas áreas de estudio. Estamos orgullosos de haber sido parte de su formación y les deseamos el mayor de los éxitos en sus futuras carreras y proyectos.</p>
+    </div>
+</section>
+
+
+    <section id="contacto" class="seccion hidden">
+        <h2>Contacto</h2>
+        <p>Si deseas más información, no dudes en contactarnos a través de nuestro correo electrónico o por teléfono. Estamos aquí para ayudarte en tu camino educativo.</p>
+        <p>Email: <a href="mailto:contacto@cefdr.edu.hn">contacto@cefdr.edu.hn</a></p>
+        <p>Teléfono: +504 1234-5678</p>
+        <p>También puedes visitarnos en nuestras redes sociales para estar al tanto de nuestras novedades y eventos.</p>
+    </section>
+
+<section id="Promoción 2024" class="seccion hidden">
+    <h2>Bienvenido al Centro Educativo Franklin Delano Roosevelt</h2>
+    <p>El Centro Educativo Franklin Delano Roosevelt se enorgullece de ser una de las instituciones más destacadas de Puerto Cortés, Honduras. Ofrecemos una formación técnica de alta calidad que prepara a nuestros estudiantes para enfrentarse a los retos del mundo laboral y académico.</p>
+    <p>Contamos con un cuerpo docente altamente capacitado, infraestructura moderna y un enfoque educativo orientado hacia el desarrollo integral de nuestros estudiantes. Nuestro objetivo es no solo brindar conocimientos técnicos, sino también fomentar valores como la responsabilidad, el trabajo en equipo y el liderazgo.</p>
+    <h3>Promoción 2024</h3> <img src="promo24.jpg" alt="promo24" style="width: 200px; height: 200px; margin-right: 60px;"> <img src="promo23.jpg" alt="promo23" style="width: 200px; height: 200px; margin-right: 60px;"><img src="promo22.jpg" alt="promo22" style="width: 200px; height: 200px; margin-right: 60px;"> 
+    <div>
+    <p>Nos complace anunciar que la Promoción 2024 del Centro Educativo Franklin Delano Roosevelt está compuesta por un grupo excepcional de jóvenes talentosos y dedicados. Estos estudiantes han demostrado su compromiso con el aprendizaje, superando desafíos y destacándose en diversas áreas académicas y técnicas.</p>
+    <p>Los graduados de la Promoción 2024 están preparados para afrontar los desafíos del futuro, con habilidades técnicas y humanas que los convertirán en líderes en sus respectivas áreas de estudio. Estamos orgullosos de haber sido parte de su formación y les deseamos el mayor de los éxitos en sus futuras carreras y proyectos.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Centro Educativo Franklin Delano Roosevelt - Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function mostrarDetalles(id) {
+        var detalles = document.getElementById(id);
+        if (detalles.style.display === "none" || detalles.style.display === "") {
+            detalles.style.display = "block";
+        } else {
+            detalles.style.display = "none";
+        }
+    }
+
+    function mostrarSeccion(seccion) {
+        // Ocultar todas las secciones
+        var secciones = document.getElementsByClassName('seccion');
+        for (var i = 0; i < secciones.length; i++) {
+            secciones[i].classList.add('hidden');
+        }
+        // Mostrar la sección seleccionada
+        document.getElementById(seccion).classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
+
+<h2>Video de la Carrera</h2>
+<video width="500" height="300" controls>
+    <source src="C:\Users\Josue\Downloads\Video de info.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+</video>
+
+
+<h2>Video del Colegio</h2>
+<video width="500" height="300" controls>
+    <source src="C:\Users\Josue\Downloads\Video anuncio fdr.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+</video>
